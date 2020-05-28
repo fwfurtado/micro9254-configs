@@ -1,6 +1,7 @@
 info:
   id: ${random.uuid}
   hello: world
+  date: ${java.version.date}
 
 services:
   address:
