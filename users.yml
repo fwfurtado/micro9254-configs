@@ -1,0 +1,25 @@
+info:
+  id: ${random.uuid}
+  hello: world
+
+services:
+  address:
+    uri: "https://viacep.com.br/ws/{cep}/json/"
+
+spring:
+  rabbitmq:
+    host: k8s.local.technology
+  cloud:
+    stream:
+      bindings:
+        user:
+          destination: users
+
+---
+info:
+  hello: blah
+  name: ${spring.application.name}
+
+spring:
+  profiles: prod
+
